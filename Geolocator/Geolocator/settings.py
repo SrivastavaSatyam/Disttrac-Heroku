@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-
+import django_heroku
 from pathlib import Path
 from crispy_forms.exceptions import CrispyError
 from crispy_forms.utils import TEMPLATE_PACK ,flatatt
@@ -143,4 +143,5 @@ STATICFILES_DIRS = [
 GEOIP_PATH =os.path.join(BASE_DIR, 'geoip')
 
 # DJANGO_COLORS='error=white/black;notice=magenta'
-
+# Activate Django-Heroku.
+django_heroku.settings(locals())
